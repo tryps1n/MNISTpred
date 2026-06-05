@@ -1,0 +1,6 @@
+.venv
+
+pulmosight/
+__pycache__/
+
+data/
