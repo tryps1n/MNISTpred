@@ -125,7 +125,7 @@ class DrawApp():
         for bar, _ in self.conf_bars:
             bar.place(x=0, y=0, relheight=1, width=1)
 
-root = tk.Tk()
-app = DrawApp(root)
-root.mainloop()
-        
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = DrawApp(root)
+    root.mainloop()

@@ -22,20 +22,9 @@ epoch_data, loss_data = train_model(train_dl, model)
 
 plt.plot(epoch_data, loss_data)
 
-torch.save(model.state_dict(), 'data/mnist_model.pth')
+torch.save(model.state_dict(), '../data/mnist_model.pth')
 
 print("finished training, model saved.")
 
-# epoch_data_avg = epoch_data.reshape(20, -1).mean(axis=1)
-# loss_data_avg = loss_data.reshape(20, -1).mean(axis=1)
-
-# xs, ys = test_ds[0:2000]
-# yhats = model(xs).argmax(axis=1)
-
-# fig, ax = plt.subplots(10, 4, figsize=(10, 15))
-# for i in range(40):
-#     plt.subplot(10, 4, i+1)
-#     plt.imshow(xs[i])
-#     plt.title(f'Predicted Digit {yhats[i]}')
-# fig.tight_layout()
-# plt.show()
+plt.plot(loss_data)
+plt.show()

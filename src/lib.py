@@ -30,7 +30,7 @@ class MNISTneuralNetwork(nn.Module):
         x = self.layer3(x)
         return x.squeeze() 
 
-def train_model(dl, neunet, n_epochs=20):
+def train_model(dl, neunet, n_epochs=50):
     opt = SGD(neunet.parameters(), lr=0.01)
     L = nn.CrossEntropyLoss()
 
